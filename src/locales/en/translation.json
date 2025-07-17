@@ -2,6 +2,27 @@
     "home": "Home",
     "about": "About us",
     "tour": "Tours",
-    "contact": "Contact us"
+    "contact": "Contact us",
+
+    
+      "hero": {
+        "slide1": {
+          "title": "Giza Pyramids",
+          "desc": "One of the Seven Wonders of the Ancient World, the Giza Pyramids are Egypt's most famous historical monument.",
+          "button": "Learn More"
+        },
+        "slide2": {
+          "title": "Travel the Silk Road",
+          "desc": "Embark on an adventure through ancient cities!",
+          "button": "Start Journey"
+        },
+        "slide3": {
+          "title": "Cultural Heritage",
+          "desc": "Feel the richness of ancient traditions",
+          "button": "Book Now"
+        }
+      }
+  
+    
   }
   

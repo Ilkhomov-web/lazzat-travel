@@ -2,5 +2,23 @@
   "home": "Bosh sahifa",
   "about": " Biz haqida",
   "tour": "Turlar",
-  "contact": " Biz bilan bog'lanish"
+  "contact": " Biz bilan bog'lanish",
+
+  "hero": {
+    "slide1": {
+      "title": "Giza Piramidalari",
+      "desc": "Dunyoning yetti qadimgi mo'jizasidan biri bo'lgan Giza Piramidalari Misrning eng mashhur tarixiy yodgorligidir.",
+      "button": "Batafsil"
+    },
+    "slide2": {
+      "title": "Ipak yo‘li bo‘ylab sayohat",
+      "desc": "Qadimiy shaharlarda sarguzashtni boshlang!",
+      "button": "Sayohatni boshlang"
+    },
+    "slide3": {
+      "title": "Madaniy meros",
+      "desc": "Boy an’analarni his qiling",
+      "button": "Buyurtma bering"
+    }
+  }
 }
