@@ -39,6 +39,7 @@ const HeroSwiper = () => {
       {slides.map((slide) => (
         <SwiperSlide key={slide.id}>
           <div
+            id="home"
             className="slide"
             style={{
               width: "100%",

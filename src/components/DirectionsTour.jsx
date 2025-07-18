@@ -9,7 +9,7 @@ function DirectionsTour() {
   const tours = t("tourData", { returnObjects: true });
 
   return (
-    <Box sx={{ margin: "100px" }}>
+    <Box id="tour" sx={{ margin: "100px" }}>
       <Container maxWidth={"xl"}>
         <Typography
           variant="h2"

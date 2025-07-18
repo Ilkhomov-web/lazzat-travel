@@ -12,13 +12,13 @@ function Home() {
   return (
     <>
       <Navbar />
-      <HeroSwiper />
-      <AboutUs />
-      <DirectionsTour />
+      <HeroSwiper id="home" />
+      <AboutUs id="about" />
+      <DirectionsTour id="tour" />
       <VideoContent />
       <TourInfo />
       <TourGallary />
-      <Footer />
+      <Footer id="contact" />
     </>
   );
 }

@@ -10,6 +10,7 @@ import TranslateButton from "./translateButton";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-scroll";
 
 function Navbar() {
   const { t, i18n } = useTranslation();
@@ -48,10 +49,18 @@ function Navbar() {
         >
           <Box component={"img"} src="/logo2.2.png" width={"150px"}></Box>
           <ListItem sx={{ width: "40%", color: "white" }}>
-            <ListItemButton>{t("home")}</ListItemButton>
-            <ListItemButton>{t("about")}</ListItemButton>
-            <ListItemButton>{t("tour")}</ListItemButton>
-            <ListItemButton>{t("contact")}</ListItemButton>
+            <Link to="home" smooth duration={500}>
+              <ListItemButton>{t("home")}</ListItemButton>
+            </Link>
+            <Link to="about" smooth duration={500}>
+              <ListItemButton>{t("about")}</ListItemButton>
+            </Link>
+            <Link to="tour" smooth duration={500}>
+              <ListItemButton>{t("tour")}</ListItemButton>
+            </Link>
+            <Link to="contact" smooth duration={500}>
+              <ListItemButton>{t("contact")}</ListItemButton>
+            </Link>
           </ListItem>
 
           <Box

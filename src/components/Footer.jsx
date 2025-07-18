@@ -1,10 +1,13 @@
 import { Box, Container, Grid, Typography, Link, Divider } from "@mui/material";
+import { useTranslation } from "react-i18next";
+import InstagramIcon from "@mui/icons-material/Instagram";
+import TelegramIcon from "@mui/icons-material/Telegram";
 import { styled } from "@mui/material/styles";
 
 const StyledFooter = styled(Box)(({ theme }) => ({
   backgroundColor: "#000000",
   color: "#ffffff",
-  padding: theme.spacing(20, 0, 20),
+  padding: theme.spacing(10, 0),
   marginTop: "auto",
 }));
 
@@ -22,7 +25,6 @@ const FooterLink = styled(Link)(({ theme }) => ({
   fontSize: "0.9rem",
   "&:hover": {
     color: "#ff9800",
-    textDecoration: "none",
   },
 }));
 
@@ -45,78 +47,75 @@ const OrangeText = styled("span")({
 });
 
 export default function Footer() {
+  const { t, i18n } = useTranslation();
+
   return (
-    <StyledFooter>
+    <StyledFooter id="contact">
       <Container maxWidth="lg">
         <Grid container spacing={4}>
           {/* Address Section */}
           <Grid item xs={12} sm={6} md={3}>
-            <SectionTitle>Address</SectionTitle>
+            <SectionTitle>{t("address")}</SectionTitle>
             <Typography variant="body2" sx={{ mb: 1, color: "#cccccc" }}>
-              Legal address: Tashkent,
+              {t("Legal-address")}: Jizzax,
             </Typography>
             <Typography variant="body2" sx={{ mb: 1, color: "#cccccc" }}>
-              Mirobod distr, Afrosiyob str, 12
+              Sharof Rashidov str, 12
             </Typography>
             <Typography variant="body2" sx={{ mb: 1, color: "#cccccc" }}>
-              Opening hours: 9:00 до 19:00
+              {t("opening-hours")}: 9:00 - 19:00
             </Typography>
             <Typography variant="body2" sx={{ color: "#cccccc" }}>
-              Working days: Monday - Saturday
+              {t("working-days")}: Monday - Saturday
             </Typography>
           </Grid>
 
           {/* Booking Section */}
           <Grid item xs={12} sm={6} md={3}>
             <SectionTitle>
-              <OrangeText>COCOS TOUR</OrangeText>
+              <OrangeText>LAZZAT TOUR</OrangeText>
             </SectionTitle>
             <Typography variant="body1" sx={{ mb: 2, fontWeight: 500 }}>
-              Booking / Consultation
+              {t("consultation")}
             </Typography>
             <Typography variant="body2" sx={{ mb: 1 }}>
-              +998 97 177 58 48
+              +99899 867 60 00
             </Typography>
-            <FooterLink href="mailto:info@cocos-tour.uz">
-              info@cocos-tour.uz
+            <FooterLink href="mailto:info@lazzat-tour.uz">
+              info@lazzat-tour.uz
             </FooterLink>
           </Grid>
 
           {/* Navigation Section */}
           <Grid item xs={12} sm={6} md={3}>
             <SectionTitle>Navigation</SectionTitle>
-            <FooterLink href="/">Main</FooterLink>
-            <FooterLink href="/about">About us</FooterLink>
-            <FooterLink href="/tours">Tours</FooterLink>
-            <FooterLink href="/contact">Contact us</FooterLink>
+            <FooterLink href="/">{t("home")}</FooterLink>
+            <FooterLink href="/about">{t("about")}</FooterLink>
+            <FooterLink href="/tours">{t("tour")}</FooterLink>
+            <FooterLink href="/contact">{t("contact")}</FooterLink>
           </Grid>
 
-          {/* Payment Section */}
+          {/* Map Section */}
           <Grid item xs={12} sm={6} md={3}>
-            <SectionTitle>Accept For Payment</SectionTitle>
+            {/* <SectionTitle>Location</SectionTitle> */}
             <Box
-              sx={{ display: "flex", alignItems: "center", flexWrap: "wrap" }}
+              sx={{
+                borderRadius: "12px",
+                overflow: "hidden",
+                width: "500px",
+                height: "180px",
+                boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
+              }}
             >
-              <PaymentIcon
-                src="/placeholder.svg?height=24&width=40"
-                alt="Click"
-                style={{ backgroundColor: "#0066cc" }}
-              />
-              <PaymentIcon
-                src="/placeholder.svg?height=24&width=40"
-                alt="PayMe"
-                style={{ backgroundColor: "#00aaff" }}
-              />
-              <PaymentIcon
-                src="/placeholder.svg?height=24&width=40"
-                alt="Mastercard"
-                style={{ backgroundColor: "#eb001b" }}
-              />
-              <PaymentIcon
-                src="/placeholder.svg?height=24&width=40"
-                alt="Visa"
-                style={{ backgroundColor: "#1a1f71" }}
-              />
+              <iframe
+                src="https://www.google.com/maps/embed?pb=!1m14!1m12!1m3!1d381.27376289211765!2d67.82178590027895!3d40.13804897631392!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!5e0!3m2!1sru!2s!4v1752850379159!5m2!1sru!2s"
+                width="100%"
+                height="100%"
+                style={{ border: 0 }}
+                allowFullScreen
+                loading="lazy"
+                referrerPolicy="no-referrer-when-downgrade"
+              ></iframe>
             </Box>
           </Grid>
         </Grid>
@@ -137,32 +136,31 @@ export default function Footer() {
             variant="body2"
             sx={{ color: "#cccccc", fontSize: "0.8rem" }}
           >
-            ООО "LAZZAT TUR" ©2025 Все права защищены | Создание сайта в
-            Ташкенте{" "}
+            {t("reserver")}{" "}
             <Link
-              href="https://go-web.uz"
+              target={"_blank"}
+              href="https://t.me/Elka_0624"
               sx={{ color: "#ff9800", textDecoration: "none" }}
             >
-              go-web.uz
+              RealCode
             </Link>
           </Typography>
 
-          <Box sx={{ display: "flex", alignItems: "center" }}>
-            <LanguageFlag
-              src="/placeholder.svg?height=16&width=24"
-              alt="English"
-              style={{ backgroundColor: "#012169" }}
-            />
-            <LanguageFlag
-              src="/placeholder.svg?height=16&width=24"
-              alt="Russian"
-              style={{ backgroundColor: "#ffffff" }}
-            />
-            <LanguageFlag
-              src="/placeholder.svg?height=16&width=24"
-              alt="Uzbek"
-              style={{ backgroundColor: "#0099cc" }}
-            />
+          <Box sx={{ display: "flex", alignItems: "center", gap: "10px" }}>
+            <a
+              style={{ color: "white" }}
+              target="_blank"
+              href="https://instagram.com/lazzattravel"
+            >
+              <InstagramIcon />
+            </a>
+            <a
+              style={{ color: "white" }}
+              target="_blank"
+              href="https://t.me/lazzattravel"
+            >
+              <TelegramIcon />
+            </a>
           </Box>
         </Box>
       </Container>

@@ -6,7 +6,7 @@ function AboutUs() {
   const { t, i18n } = useTranslation();
 
   return (
-    <Box sx={{ margin: "50px 0px" }}>
+    <Box id="about" sx={{ margin: "50px 0px" }}>
       <Container maxWidth={"xl"}>
         <Typography variant="h2" sx={{ textAlign: "center" }}>
           {t("about-us")}

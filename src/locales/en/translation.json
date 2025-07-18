@@ -64,7 +64,13 @@
   }
 ],
 "tour-title":"Let's travel with",
-"tour-desc":" is a travel company that specializes in organizing travel around the world. It provides a wide range of tours, ranging from exotic resorts to cultural and historical attractions."
+"tour-desc":" is a travel company that specializes in organizing travel around the world. It provides a wide range of tours, ranging from exotic resorts to cultural and historical attractions.",
+"address": "Address",
+  "Legal-address": "Legal address",
+  "opening-hours": "Opening hours",
+  "working-days": "Working days",
+  "consultation": "Booking / consultation",
+  "reserver": "LLC 'LAZZAT TUR' ©2025 All rights reserved | Website by"
 
 
     
