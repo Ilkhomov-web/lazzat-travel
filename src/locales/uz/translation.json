@@ -24,5 +24,44 @@
 
   "about-us": "Biz haqimizda",
   "about-desc":"Biz dunyoning eng go'zal va sirli joylarida dam olish uchun bir nechta tegishli takliflarni tanladik! Siz qaror qabul qilishingizni osonlashtirish uchun ularni dam olish turlari va mehmonxonalar bo'yicha ajratish. Qolganlari haqida savollaringiz bo'lsa, bizning ofislarimizga qo'ng'iroq qiling va maslahatchilarimiz sizga albatta yordam berishadi!",
-  "about-button":"Ko'proq Ma'lumot"
+  "about-button":"Ko'proq Ma'lumot",
+
+  "tourData": [
+  {
+    "title": "Misr sayohati",
+    "desc": "Qadimgi tarixiy joylar, piramidalar va Nil daryosining go'zalligi bilan tanishing.",
+    "duration": "7 kun",
+    "image": "/agypt.jpg",
+    "price": "$120",
+    "location": "Qohira, Misr",
+    "includes": ["Aviabilet", "Mehmonxona", "Ekskursiyalar", "Nonushta"],
+    "button": "Bron qilish",
+    "rating": "4.5"
+  },
+  {
+    "title": "Gruziya bo'ylab safar",
+    "desc": "Tbilisining tor ko'chalari va Kavkaz tog'larining betakror manzaralari bilan maroqli safar.",
+    "duration": "5 kun",
+    "image": "/gruziya.jpg",
+    "price": "$620",
+    "location": "Tbilisi, Gruziya",
+    "includes": ["Aviabilet", "Transfer", "Nonushta", "Mehmonxona"],
+    "button": "Bron qilish",
+    "rating": "4.7"
+  },
+  {
+    "title": "Dubay sarguzashti",
+    "desc": "Zamonaviy arxitektura, cho‘l safari va hashamatli tajribalarni o‘z ichiga oladi.",
+    "duration": "6 kun",
+    "image": "/dubai.jpg",
+    "price": "$990",
+    "location": "Dubay, BAA",
+    "includes": ["Aviabilet", "5 yulduzli mehmonxona", "Desert Safari", "Nonushta"],
+    "button": "Bron qilish",
+    "rating": "5"
+  }
+  
+],
+"tour-title":"bilan sayohat qiling",
+"tour-desc":" butun dunyo bo'ylab sayohatlarni tashkil etishga ixtisoslashgan sayyohlik kompaniyasi. U ekzotik kurortlardan tortib madaniy va tarixiy diqqatga sazovor joylarga qadar keng ko'lamli ekskursiyalarni taqdim etadi."
 }

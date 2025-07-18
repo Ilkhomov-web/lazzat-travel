@@ -25,8 +25,48 @@
 
       "about-us":"About Us",
       "about-desc":"We have selected some relevant offers for holidays in the most beautiful and mysterious places in the world! Dividing them by type of holiday and hotels to make it easier for you to decide. If you have any questions about the rest, call our offices and our consultants will definitely help you!",
-      "about-button":"More Information"
-  
+      "about-button":"More Information",
+
+
+      "tourData": [
+  {
+    "title": "Egypt Tour",
+    "desc": "Discover ancient historical sites, pyramids, and the beauty of the Nile River.",
+    "duration": "7 days",
+    "image": "/agypt.jpg",
+    "price": "$120",
+    "location": "Cairo, Egypt",
+    "includes": ["Flight ticket", "Hotel", "Excursions", "Breakfast"],
+    "button": "Book Now",
+    "rating": "4.5"
+  },
+  {
+    "title": "Trip around Georgia",
+    "desc": "An enjoyable journey through the narrow streets of Tbilisi and the stunning views of the Caucasus Mountains.",
+    "duration": "5 days",
+    "image": "/gruziya.jpg",
+    "price": "$620",
+    "location": "Tbilisi, Georgia",
+    "includes": ["Flight ticket", "Transfer", "Breakfast", "Hotel"],
+    "button": "Book Now",
+    "rating": "4.7"
+  },
+  {
+    "title": "Dubai Adventure",
+    "desc": "Includes modern architecture, desert safari, and luxurious experiences.",
+    "duration": "6 days",
+    "image": "/dubai.jpg",
+    "price": "$990",
+    "location": "Dubai, UAE",
+    "includes": ["Flight ticket", "5-star hotel", "Desert Safari", "Breakfast"],
+    "button": "Book Now",
+    "rating": "5"
+  }
+],
+"tour-title":"Let's travel with",
+"tour-desc":" is a travel company that specializes in organizing travel around the world. It provides a wide range of tours, ranging from exotic resorts to cultural and historical attractions."
+
+
     
   }
   

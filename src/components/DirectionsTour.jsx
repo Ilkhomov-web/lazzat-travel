@@ -1,8 +1,13 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
 import tourData from "../data/tourData";
+import { useTranslation } from "react-i18next";
 
 function DirectionsTour() {
+  const { t, i18n } = useTranslation();
+
+  const tours = t("tourData", { returnObjects: true });
+
   return (
     <Box sx={{ margin: "100px" }}>
       <Container maxWidth={"xl"}>
@@ -21,7 +26,7 @@ function DirectionsTour() {
             padding: "20px",
           }}
         >
-          {tourData.map((item) => {
+          {tours.map((item) => {
             return (
               <Box
                 sx={{
@@ -35,8 +40,11 @@ function DirectionsTour() {
                   borderRadius: "12px",
                   paddingBottom: "20px",
                   boxShadow: "0px 0px 20px 0px gray",
+                  transition: "0.3s",
                   "&:hover": {
                     cursor: "pointer",
+                    transform: "scale(1.1)",
+                    transition: "0.3s",
                   },
                 }}
                 key={item.id}
