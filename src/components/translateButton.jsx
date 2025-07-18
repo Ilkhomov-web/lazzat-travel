@@ -7,11 +7,14 @@ import ListItemButton from "@mui/material/ListItemButton";
 import ListItemIcon from "@mui/material/ListItemIcon";
 import ListItemText from "@mui/material/ListItemText";
 import { useTranslation } from "react-i18next";
+import uz from "../assets/uz-flag.png";
+import ru from "../assets/rus-flag.png";
+import us from "../assets/usa-flag.png";
 
 const languages = [
-  { code: "uz", label: "Uz", flag: "uz-flag.png" },
-  { code: "ru", label: "Ru", flag: "rus-flag.png" },
-  { code: "en", label: "En", flag: "usa-flag.png" },
+  { code: "uz", label: "Uz", flag: uz },
+  { code: "ru", label: "Ru", flag: ru },
+  { code: "en", label: "En", flag: us },
 ];
 
 function TranslateButton() {

@@ -28,6 +28,7 @@
 
   "tourData": [
   {
+    "id":"0",
     "title": "Misr sayohati",
     "desc": "Qadimgi tarixiy joylar, piramidalar va Nil daryosining go'zalligi bilan tanishing.",
     "duration": "7 kun",
@@ -39,6 +40,7 @@
     "rating": "4.5"
   },
   {
+    "id":"1",
     "title": "Gruziya bo'ylab safar",
     "desc": "Tbilisining tor ko'chalari va Kavkaz tog'larining betakror manzaralari bilan maroqli safar.",
     "duration": "5 kun",
@@ -50,6 +52,7 @@
     "rating": "4.7"
   },
   {
+    "id":"2",
     "title": "Dubay sarguzashti",
     "desc": "Zamonaviy arxitektura, cho‘l safari va hashamatli tajribalarni o‘z ichiga oladi.",
     "duration": "6 kun",

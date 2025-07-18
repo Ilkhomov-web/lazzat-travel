@@ -11,10 +11,20 @@ import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
+import { useNavigate } from "react-router-dom";
 
 function Navbar() {
   const { t, i18n } = useTranslation();
   const [isScrolled, setIsScrolled] = useState(false);
+  const navigate = useNavigate();
+
+  const scrollToHome = () => {
+    navigate("/", { replace: false });
+    setTimeout(() => {
+      const homeSection = document.getElementById("home");
+      homeSection?.scrollIntoView({ behavior: "smooth" });
+    }, 100); // 100ms delay sahifa yuklanishini kutish uchun
+  };
 
   useEffect(() => {
     const handleScroll = () => {
@@ -50,7 +60,9 @@ function Navbar() {
           <Box component={"img"} src="/logo2.2.png" width={"150px"}></Box>
           <ListItem sx={{ width: "40%", color: "white" }}>
             <Link to="home" smooth duration={500}>
-              <ListItemButton>{t("home")}</ListItemButton>
+              <ListItemButton onClick={scrollToHome}>
+                {t("home")}
+              </ListItemButton>
             </Link>
             <Link to="about" smooth duration={500}>
               <ListItemButton>{t("about")}</ListItemButton>

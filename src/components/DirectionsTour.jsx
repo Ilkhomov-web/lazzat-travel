@@ -2,9 +2,11 @@ import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
 import tourData from "../data/tourData";
 import { useTranslation } from "react-i18next";
+import { useNavigate } from "react-router-dom";
 
 function DirectionsTour() {
   const { t, i18n } = useTranslation();
+  const navigate = useNavigate();
 
   const tours = t("tourData", { returnObjects: true });
 
@@ -73,6 +75,7 @@ function DirectionsTour() {
                   </Typography>
                 </Box>
                 <Button
+                  onClick={() => navigate(`/selected-tour/${item.id}`)}
                   sx={{
                     width: "300px",
                     margin: "0 auto",
