@@ -15,7 +15,14 @@ function Navbar() {
   const { t, i18n } = useTranslation();
 
   return (
-    <Box sx={{ width: "100%", background: "#0056b8" }}>
+    <Box
+      sx={{
+        width: "100%",
+        // background: "#0056b8",
+        position: "absolute",
+        zIndex: "1000",
+      }}
+    >
       <Container maxWidth={"xl"}>
         <Box
           sx={{
@@ -24,7 +31,7 @@ function Navbar() {
             alignItems: "center",
           }}
         >
-          <Box component={"img"} src="/logo.png" width={"150px"}></Box>
+          <Box component={"img"} src="/logo2.2.png" width={"150px"}></Box>
           <ListItem sx={{ width: "40%", color: "white" }}>
             <ListItemButton>{t("home")}</ListItemButton>
             <ListItemButton>{t("about")}</ListItemButton>

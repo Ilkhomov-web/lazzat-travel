@@ -21,7 +21,11 @@
           "desc": "Feel the richness of ancient traditions",
           "button": "Book Now"
         }
-      }
+      },
+
+      "about-us":"About Us",
+      "about-desc":"We have selected some relevant offers for holidays in the most beautiful and mysterious places in the world! Dividing them by type of holiday and hotels to make it easier for you to decide. If you have any questions about the rest, call our offices and our consultants will definitely help you!",
+      "about-button":"More Information"
   
     
   }

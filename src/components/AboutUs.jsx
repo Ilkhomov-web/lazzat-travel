@@ -1,69 +1,61 @@
+import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
-import { Box, Typography, Grid, Button } from "@mui/material";
-import { useTheme, useMediaQuery } from "@mui/material";
+import { useTranslation } from "react-i18next";
 
-const AboutUs = () => {
-  const theme = useTheme();
-  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+function AboutUs() {
+  const { t, i18n } = useTranslation();
 
   return (
-    <Box sx={{ py: 8, px: 4, backgroundColor: "#f9f9f9" }}>
-      <Grid
-        container
-        spacing={4}
-        direction={isMobile ? "column" : "row"}
-        alignItems="center"
-      >
-        {/* Left - Text content */}
-        <Grid item xs={12} md={6}>
-          <Typography variant="h4" gutterBottom>
-            Biz haqimizda
-          </Typography>
-          <Typography variant="body1" paragraph>
-            Biz sayohat va hujjatlar bilan shug‘ullanadigan ishonchli
-            kompaniyamiz. Mijozlarga tez va ishonchli xizmatlar ko‘rsatamiz. Har
-            bir xizmat litsenziyalangan va xalqaro talablarga mos keladi.
-          </Typography>
-          <Typography variant="subtitle1" color="text.secondary">
-            Rasmiy litsenziyaga egamiz va barcha xizmatlarimiz qonuniy asosda
-            yuritiladi.
-          </Typography>
-        </Grid>
-
-        {/* Right - Image and License */}
-        <Grid item xs={12} md={6}>
-          <Box
+    <Box sx={{ margin: "50px 0px" }}>
+      <Container maxWidth={"xl"}>
+        <Typography variant="h2" sx={{ textAlign: "center" }}>
+          {t("about-us")}
+        </Typography>
+        <Grid
+          container
+          spacing={2}
+          sx={{
+            display: "flex",
+            justifyContent: "space-between",
+            alignItems: "center",
+            marginTop: "80px",
+          }}
+        >
+          <Grid
             sx={{
+              background: "white",
+              width: "45%",
+              height: "400px",
               display: "flex",
               flexDirection: "column",
-              alignItems: isMobile ? "center" : "flex-start",
-              gap: 2,
+              justifyContent: "space-between",
+              padding: "30px",
+              alignItems: "left",
             }}
           >
-            <Box
-              component="img"
-              src="/dubai.jpg" // o'zingizda bor rasmni joylang
-              alt="Office"
-              sx={{
-                width: "100%",
-                maxWidth: 400,
-                borderRadius: 2,
-                boxShadow: 3,
-              }}
-            />
+            <Typography variant="h3">Lazzat Tour</Typography>
+            <Typography variant="h6" fontSize={"18px"} color="gray">
+              {t("about-desc")}
+            </Typography>
             <Button
-              variant="outlined"
-              href="/dubai.jpg" // yoki hujjat rasmi: /license.jpg
-              target="_blank"
-              sx={{ mt: 2 }}
+              sx={{ background: "#0056b8", color: "white", textAlign: "left" }}
             >
-              Litsenziyani ko‘rish
+              {t("about-button")}
             </Button>
-          </Box>
+          </Grid>
+          <Grid
+            sx={{ background: "white", width: "45%", borderRadius: "12px" }}
+          >
+            <Box
+              component={"img"}
+              src="/dubai-family.jpg"
+              sx={{ width: "100%", borderRadius: "12px" }}
+            ></Box>
+          </Grid>
         </Grid>
-      </Grid>
+      </Container>
     </Box>
   );
-};
+}
 
 export default AboutUs;

@@ -20,5 +20,9 @@
       "desc": "Boy an’analarni his qiling",
       "button": "Buyurtma bering"
     }
-  }
+  },
+
+  "about-us": "Biz haqimizda",
+  "about-desc":"Biz dunyoning eng go'zal va sirli joylarida dam olish uchun bir nechta tegishli takliflarni tanladik! Siz qaror qabul qilishingizni osonlashtirish uchun ularni dam olish turlari va mehmonxonalar bo'yicha ajratish. Qolganlari haqida savollaringiz bo'lsa, bizning ofislarimizga qo'ng'iroq qiling va maslahatchilarimiz sizga albatta yordam berishadi!",
+  "about-button":"Ko'proq Ma'lumot"
 }
