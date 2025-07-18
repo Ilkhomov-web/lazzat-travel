@@ -80,7 +80,7 @@ function DirectionsTour() {
                     color: "white",
                   }}
                 >
-                  Hoziroq Band Qiling
+                  {item.button}
                 </Button>
               </Box>
             );

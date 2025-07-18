@@ -4,7 +4,7 @@ import { styled } from "@mui/material/styles";
 const StyledFooter = styled(Box)(({ theme }) => ({
   backgroundColor: "#000000",
   color: "#ffffff",
-  padding: theme.spacing(6, 0, 2),
+  padding: theme.spacing(20, 0, 20),
   marginTop: "auto",
 }));
 
@@ -137,7 +137,8 @@ export default function Footer() {
             variant="body2"
             sx={{ color: "#cccccc", fontSize: "0.8rem" }}
           >
-            ООО "COCOS TUR" ©2025 Все права защищены | Создание сайта в Ташкенте{" "}
+            ООО "LAZZAT TUR" ©2025 Все права защищены | Создание сайта в
+            Ташкенте{" "}
             <Link
               href="https://go-web.uz"
               sx={{ color: "#ff9800", textDecoration: "none" }}

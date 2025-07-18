@@ -35,7 +35,7 @@
     "price": "$120",
     "location": "Qohira, Misr",
     "includes": ["Aviabilet", "Mehmonxona", "Ekskursiyalar", "Nonushta"],
-    "button": "Bron qilish",
+    "button": "Band qilish",
     "rating": "4.5"
   },
   {
@@ -46,7 +46,7 @@
     "price": "$620",
     "location": "Tbilisi, Gruziya",
     "includes": ["Aviabilet", "Transfer", "Nonushta", "Mehmonxona"],
-    "button": "Bron qilish",
+    "button": "Band qilish",
     "rating": "4.7"
   },
   {
@@ -57,7 +57,7 @@
     "price": "$990",
     "location": "Dubay, BAA",
     "includes": ["Aviabilet", "5 yulduzli mehmonxona", "Desert Safari", "Nonushta"],
-    "button": "Bron qilish",
+    "button": "Band qilish",
     "rating": "5"
   }
   
