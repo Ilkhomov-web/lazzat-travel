@@ -12,6 +12,7 @@ import TelegramIcon from "@mui/icons-material/Telegram";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-scroll";
 import { useNavigate } from "react-router-dom";
+import FacebookIcon from "@mui/icons-material/Facebook";
 
 function Navbar() {
   const { t, i18n } = useTranslation();
@@ -83,15 +84,27 @@ function Navbar() {
               alignItems: "center",
             }}
           >
-            <Button>
-              <InstagramIcon sx={{ color: "white", fontSize: "28px" }} />
-            </Button>
-            <Button>
-              <TelegramIcon sx={{ color: "white", fontSize: "28px" }} />
-            </Button>
-            <Button>
-              <InstagramIcon sx={{ color: "white", fontSize: "28px" }} />
-            </Button>
+            <a
+              style={{ color: "white" }}
+              target="_blank"
+              href="https://instagram.com/lazzattravel"
+            >
+              <InstagramIcon />
+            </a>
+            <a
+              style={{ color: "white" }}
+              target="_blank"
+              href="https://t.me/lazzattravel"
+            >
+              <TelegramIcon />
+            </a>
+            <a
+              style={{ color: "white" }}
+              target="_blank"
+              href="https://t.me/lazzattravel"
+            >
+              <FacebookIcon />
+            </a>
             <TranslateButton />
           </Box>
         </Box>

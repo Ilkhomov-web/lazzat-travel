@@ -6,6 +6,7 @@ import "swiper/css/navigation";
 import "../assets/css/heroSwiper.css";
 import { useTranslation } from "react-i18next";
 import { Button } from "@mui/material";
+import { Link } from "react-scroll";
 
 const slides = [
   {
@@ -53,22 +54,24 @@ const HeroSwiper = () => {
             <div className="overlay">
               <h1>{t(`${slide.key}.title`)}</h1>
               <p>{t(`${slide.key}.desc`)}</p>
-              <Button
-                sx={{
-                  background: "#0056b8",
-                  color: "white",
-                  padding: "15px 20px",
-                  borderRadius: "12px",
-                  "&:hover": {
-                    backgroundColor: "#003f8a",
-                    transform: "scale(1.05)",
-                    boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+              <Link to="tour" smooth duration={500}>
+                <Button
+                  sx={{
+                    background: "#0056b8",
                     color: "white",
-                  },
-                }}
-              >
-                {t(`${slide.key}.button`)}
-              </Button>
+                    padding: "15px 20px",
+                    borderRadius: "12px",
+                    "&:hover": {
+                      backgroundColor: "#003f8a",
+                      transform: "scale(1.05)",
+                      boxShadow: "0 4px 10px rgba(0,0,0,0.2)",
+                      color: "white",
+                    },
+                  }}
+                >
+                  {t(`${slide.key}.button`)}
+                </Button>
+              </Link>
             </div>
           </div>
         </SwiperSlide>
