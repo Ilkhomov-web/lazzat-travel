@@ -90,9 +90,9 @@ export default function Footer() {
           <Grid item xs={12} sm={6} md={3}>
             <SectionTitle>Navigation</SectionTitle>
             <FooterLink href="/">{t("home")}</FooterLink>
-            <FooterLink href="/about">{t("about")}</FooterLink>
-            <FooterLink href="/tours">{t("tour")}</FooterLink>
-            <FooterLink href="/contact">{t("contact")}</FooterLink>
+            <FooterLink href="/">{t("about")}</FooterLink>
+            <FooterLink href="/">{t("tour")}</FooterLink>
+            <FooterLink href="/">{t("contact")}</FooterLink>
           </Grid>
 
           {/* Map Section */}

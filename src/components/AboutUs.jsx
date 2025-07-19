@@ -1,6 +1,7 @@
 import { Box, Button, Container, Grid, Typography } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
+import { Link } from "react-router-dom";
 
 function AboutUs() {
   const { t, i18n } = useTranslation();
@@ -37,11 +38,17 @@ function AboutUs() {
             <Typography variant="h6" fontSize={"18px"} color="gray">
               {t("about-desc")}
             </Typography>
-            <Button
-              sx={{ background: "#0056b8", color: "white", textAlign: "left" }}
-            >
-              {t("about-button")}
-            </Button>
+            <Link to={"/contact"} style={{ textDecoration: "none" }}>
+              <Button
+                sx={{
+                  background: "#0056b8",
+                  color: "white",
+                  textAlign: "left",
+                }}
+              >
+                {t("about-button")}
+              </Button>
+            </Link>
           </Grid>
           <Grid
             sx={{ background: "white", width: "45%", borderRadius: "12px" }}
