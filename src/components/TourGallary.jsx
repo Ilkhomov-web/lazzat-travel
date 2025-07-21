@@ -7,11 +7,11 @@ const images = [
   "agypt.jpg",
   "dubai.jpg",
   "gruziya.jpg",
-  "agypt.jpg",
-  "dubai.jpg",
-  "gruziya.jpg",
-  "dubai.jpg",
-  "gruziya.jpg",
+  "tailand.jpg",
+  "turkey.webp",
+  "malaziya.jpg",
+  "maldiv.webp",
+  "pariw.jpg",
 ];
 
 const ImageBox = styled(Box)(({ theme }) => ({
