@@ -58,7 +58,7 @@ function Contact() {
               />
               <Box
                 component="img"
-                src="/Guvohnoma.jpg"
+                src="/Guvohnoma.png"
                 alt="Guvohnoma"
                 sx={{
                   width: isMobile ? "100%" : "40%",
