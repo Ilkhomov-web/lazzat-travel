@@ -1,5 +1,12 @@
 import React from "react";
-import { Box, Typography, Grid, IconButton } from "@mui/material";
+import {
+  Box,
+  Typography,
+  Grid,
+  IconButton,
+  useTheme,
+  useMediaQuery,
+} from "@mui/material";
 import InstagramIcon from "@mui/icons-material/Instagram";
 import TelegramIcon from "@mui/icons-material/Telegram";
 import FacebookIcon from "@mui/icons-material/Facebook";
@@ -9,6 +16,9 @@ import Footer from "../components/Footer";
 import HeroSwiper from "../components/Swiper";
 
 function Contact() {
+  const theme = useTheme();
+  const isMobile = useMediaQuery(theme.breakpoints.down("md"));
+
   return (
     <Box>
       <Navbar />
@@ -25,39 +35,42 @@ function Contact() {
           container
           spacing={4}
           alignItems="center"
-          sx={{ display: "flex", justifyContent: "space-between" }}
+          justifyContent="space-between"
         >
           {/* Chap tarafdagi rasm */}
-          <Grid
-            sx={{ width: "40%", display: "flex", gap: "20px" }}
-            item
-            xs={12}
-            md={6}
-          >
+          <Grid item xs={12} md={6}>
             <Box
-              component="img"
-              src="/logo.png" // o'zingizga mos rasm joylashtiring
-              alt="Contact"
               sx={{
-                width: "60%",
-                borderRadius: 3,
-                boxShadow: 3,
+                display: "flex",
+                flexDirection: isMobile ? "column" : "row",
+                gap: 2,
               }}
-            />
-            <Box
-              component="img"
-              src="/Guvohnoma.jpg" // o'zingizga mos rasm joylashtiring
-              alt="Contact"
-              sx={{
-                width: "40%",
-                borderRadius: 3,
-                boxShadow: 3,
-              }}
-            />
+            >
+              <Box
+                component="img"
+                src="/logo.png"
+                alt="Contact"
+                sx={{
+                  width: isMobile ? "100%" : "60%",
+                  borderRadius: 3,
+                  boxShadow: 3,
+                }}
+              />
+              <Box
+                component="img"
+                src="/Guvohnoma.jpg"
+                alt="Guvohnoma"
+                sx={{
+                  width: isMobile ? "100%" : "40%",
+                  borderRadius: 3,
+                  boxShadow: 3,
+                }}
+              />
+            </Box>
           </Grid>
 
           {/* O'ng tarafdagi ma'lumot */}
-          <Grid sx={{ width: "40%" }} item xs={12} md={6}>
+          <Grid item xs={12} md={6}>
             <Typography variant="h4" fontWeight="bold" gutterBottom>
               Biz bilan bog‘laning
             </Typography>
@@ -75,7 +88,7 @@ function Contact() {
               alignItems="center"
               gap={1}
             >
-              <PhoneIcon /> +998 90 123 45 67
+              <PhoneIcon /> +99899 867 60 00
             </Typography>
 
             <Box mt={3}>
@@ -83,7 +96,7 @@ function Contact() {
                 Ijtimoiy tarmoqlar:
               </Typography>
 
-              <Box display="flex" gap={2}>
+              <Box display="flex" gap={2} flexWrap="wrap">
                 <IconButton
                   component="a"
                   href="https://t.me/yourchannel"

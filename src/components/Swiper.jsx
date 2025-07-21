@@ -44,7 +44,7 @@ const HeroSwiper = () => {
             className="slide"
             style={{
               width: "100%",
-              // height: "800px",
+              height: "100vh",
               backgroundImage: `url(${slide.bg})`,
               backgroundSize: "cover",
               backgroundPosition: "center",

@@ -1,93 +1,97 @@
 import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
-import tourData from "../data/tourData";
 import { useTranslation } from "react-i18next";
 import { useNavigate } from "react-router-dom";
 
 function DirectionsTour() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
   const navigate = useNavigate();
 
   const tours = t("tourData", { returnObjects: true });
 
   return (
-    <Box id="tour" sx={{ margin: "100px" }}>
-      <Container maxWidth={"xl"}>
+    <Box id="tour" sx={{ margin: { xs: "50px 20px", md: "100px auto" } }}>
+      <Container maxWidth="xl">
         <Typography
-          variant="h2"
-          sx={{ textAlign: "center", marginBottom: "80px" }}
+          variant="h4"
+          sx={{
+            textAlign: "center",
+            marginBottom: { xs: "40px", md: "80px" },
+            fontSize: { xs: "28px", md: "36px" },
+          }}
         >
           Yo'nalishlar
         </Typography>
+
         <Box
-          width={"100%"}
           sx={{
             display: "flex",
-            justifyContent: "space-between",
-            alignItems: "center",
-            padding: "20px",
+            flexWrap: "wrap",
+            justifyContent: "center",
+            gap: { xs: "30px", md: "40px" },
           }}
         >
-          {tours.map((item) => {
-            return (
+          {tours.map((item) => (
+            <Box
+              key={item.id}
+              sx={{
+                width: { xs: "100%", sm: "45%", md: "30%" },
+                minWidth: "280px",
+                height: "100%",
+                background: "white",
+                display: "flex",
+                flexDirection: "column",
+                justifyContent: "space-between",
+                borderRadius: "12px",
+                boxShadow: "0px 0px 20px 0px rgba(0,0,0,0.1)",
+                transition: "0.3s",
+                "&:hover": {
+                  cursor: "pointer",
+                  transform: "scale(1.03)",
+                },
+              }}
+            >
+              <Box
+                component="img"
+                src={item.image}
+                alt={item.title}
+                sx={{
+                  width: "100%",
+                  height: "220px",
+                  objectFit: "cover",
+                  borderTopLeftRadius: "12px",
+                  borderTopRightRadius: "12px",
+                }}
+              />
               <Box
                 sx={{
-                  width: "430px",
-                  height: "440px",
-                  background: "white",
                   display: "flex",
                   flexDirection: "column",
-                  //   gap: "20px",
-                  justifyContent: "space-between",
-                  borderRadius: "12px",
-                  paddingBottom: "20px",
-                  boxShadow: "0px 0px 20px 0px gray",
-                  transition: "0.3s",
+                  gap: "10px",
+                  padding: "16px",
+                }}
+              >
+                <Typography variant="h6">{item.title}</Typography>
+                <Typography variant="body2" color="gray">
+                  {item.desc}
+                </Typography>
+              </Box>
+              <Button
+                onClick={() => navigate(`/selected-tour/${item.id}`)}
+                sx={{
+                  width: "80%",
+                  margin: "0 auto 20px auto",
+                  background: "#0056b8",
+                  color: "white",
                   "&:hover": {
-                    cursor: "pointer",
-                    transform: "scale(1.1)",
-                    transition: "0.3s",
+                    background: "#0049a1",
                   },
                 }}
-                key={item.id}
               >
-                <Box
-                  component={"img"}
-                  src={item.image}
-                  width={"100%"}
-                  sx={{
-                    height: "250px",
-                    borderTopLeftRadius: "12px",
-                    borderTopRightRadius: "12px",
-                  }}
-                ></Box>
-                <Box
-                  sx={{
-                    display: "flex",
-                    flexDirection: "column",
-                    gap: "15px",
-                    padding: "0px 20px",
-                  }}
-                >
-                  <Typography variant="h5">{item.title}</Typography>
-                  <Typography variant="h6" fontSize={"17px"} color="gray">
-                    {item.desc}
-                  </Typography>
-                </Box>
-                <Button
-                  onClick={() => navigate(`/selected-tour/${item.id}`)}
-                  sx={{
-                    width: "300px",
-                    margin: "0 auto",
-                    background: "#0056b8",
-                    color: "white",
-                  }}
-                >
-                  {item.button}
-                </Button>
-              </Box>
-            );
-          })}
+                {item.button}
+              </Button>
+            </Box>
+          ))}
         </Box>
       </Container>
     </Box>

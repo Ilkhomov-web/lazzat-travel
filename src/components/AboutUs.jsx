@@ -1,65 +1,76 @@
-import { Box, Button, Container, Grid, Typography } from "@mui/material";
+import { Box, Button, Container, Typography } from "@mui/material";
 import React from "react";
 import { useTranslation } from "react-i18next";
 import { Link } from "react-router-dom";
 
 function AboutUs() {
-  const { t, i18n } = useTranslation();
+  const { t } = useTranslation();
 
   return (
-    <Box id="about" sx={{ margin: "50px 0px" }}>
-      <Container maxWidth={"xl"}>
-        <Typography variant="h2" sx={{ textAlign: "center" }}>
+    <Box id="about" sx={{ my: 8 }}>
+      <Container maxWidth="xl">
+        <Typography variant="h2" sx={{ textAlign: "center", mb: 6 }}>
           {t("about-us")}
         </Typography>
-        <Grid
-          container
-          spacing={2}
+
+        <Box
           sx={{
             display: "flex",
-            justifyContent: "space-between",
+            flexDirection: { xs: "column", md: "row" },
+            gap: 4,
             alignItems: "center",
-            marginTop: "80px",
           }}
         >
-          <Grid
+          {/* Text qismi */}
+          <Box
             sx={{
-              background: "white",
-              width: "45%",
-              height: "400px",
+              flex: 1,
+              backgroundColor: "white",
+              p: 4,
+              borderRadius: 2,
+              height: { xs: "auto", md: 400 },
               display: "flex",
               flexDirection: "column",
               justifyContent: "space-between",
-              padding: "30px",
-              alignItems: "left",
             }}
           >
-            <Typography variant="h3">Lazzat Tour</Typography>
-            <Typography variant="h6" fontSize={"18px"} color="gray">
+            <Typography variant="h3" sx={{ color: "black" }}>
+              Lazzat Tour
+            </Typography>
+            <Typography variant="h6" fontSize={18} color="black">
               {t("about-desc")}
             </Typography>
-            <Link to={"/contact"} style={{ textDecoration: "none" }}>
+            <Link to="/contact" style={{ textDecoration: "none" }}>
               <Button
                 sx={{
-                  background: "#0056b8",
+                  backgroundColor: "#0056b8",
                   color: "white",
-                  textAlign: "left",
+                  mt: 2,
+                  width: "fit-content",
+                  "&:hover": {
+                    backgroundColor: "#00449e",
+                  },
                 }}
               >
                 {t("about-button")}
               </Button>
             </Link>
-          </Grid>
-          <Grid
-            sx={{ background: "white", width: "45%", borderRadius: "12px" }}
-          >
-            <Box
-              component={"img"}
-              src="/dubai-family.jpg"
-              sx={{ width: "100%", borderRadius: "12px" }}
-            ></Box>
-          </Grid>
-        </Grid>
+          </Box>
+
+          {/* Rasm qismi */}
+          <Box
+            component="img"
+            src="/dubai-family.jpg"
+            alt="about"
+            sx={{
+              flex: 1,
+              width: "100%",
+              maxHeight: 400,
+              objectFit: "cover",
+              borderRadius: 2,
+            }}
+          />
+        </Box>
       </Container>
     </Box>
   );

@@ -102,7 +102,7 @@ export default function Footer() {
               sx={{
                 borderRadius: "12px",
                 overflow: "hidden",
-                width: "500px",
+                width: "100%",
                 height: "180px",
                 boxShadow: "0 4px 12px rgba(0,0,0,0.3)",
               }}
