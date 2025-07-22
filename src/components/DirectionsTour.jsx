@@ -88,7 +88,13 @@ function DirectionsTour() {
                   },
                 }}
               >
-                {item.button}
+                <a
+                  target="_blank"
+                  href="https://t.me/SHERZOD_MAMADALIEV0977"
+                  style={{ textDecoration: "none", color: "inherit" }}
+                >
+                  {item.button}
+                </a>
               </Button>
             </Box>
           ))}

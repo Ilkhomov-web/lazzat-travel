@@ -88,7 +88,22 @@ function Contact() {
               alignItems="center"
               gap={1}
             >
-              <PhoneIcon /> +99899 867 60 00
+              <Box
+                sx={{
+                  display: "flex",
+                  alignItems: "center",
+                  gap: "10px",
+                  flexDirection: "column",
+                  justifyContent: "left",
+                }}
+              >
+                <Box>
+                  <PhoneIcon /> +99899 867 60 00
+                </Box>
+                <Box>
+                  <PhoneIcon /> +99897 867 60 00
+                </Box>
+              </Box>
             </Typography>
 
             <Box mt={3}>

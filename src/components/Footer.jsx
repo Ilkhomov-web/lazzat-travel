@@ -81,6 +81,9 @@ export default function Footer() {
             <Typography variant="body2" sx={{ mb: 1 }}>
               +99899 867 60 00
             </Typography>
+            <Typography variant="body2" sx={{ mb: 1 }}>
+              +99897 867 60 00
+            </Typography>
             <FooterLink href="mailto:info@lazzat-tour.uz">
               info@lazzat-tour.uz
             </FooterLink>
