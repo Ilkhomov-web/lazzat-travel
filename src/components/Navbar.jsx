@@ -157,7 +157,7 @@ function Navbar() {
       >
         <Box
           sx={{
-            width: 450,
+            width: 250,
             p: 2,
             height: "100%",
             display: "flex",
