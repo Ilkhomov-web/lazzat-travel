@@ -76,26 +76,31 @@ function DirectionsTour() {
                   {item.desc}
                 </Typography>
               </Box>
-              <Button
-                onClick={() => navigate(`/selected-tour/${item.id}`)}
-                sx={{
-                  width: "80%",
-                  margin: "0 auto 20px auto",
-                  background: "#0056b8",
-                  color: "white",
-                  "&:hover": {
-                    background: "#0049a1",
-                  },
+              <a
+                target="_blank"
+                href="https://t.me/SHERZOD_MAMADALIEV0977"
+                style={{
+                  textDecoration: "none",
+                  color: "inherit",
+                  display: "flex",
+                  justifyContent: "center",
                 }}
               >
-                <a
-                  target="_blank"
-                  href="https://t.me/SHERZOD_MAMADALIEV0977"
-                  style={{ textDecoration: "none", color: "inherit" }}
+                <Button
+                  onClick={() => navigate(`/selected-tour/${item.id}`)}
+                  sx={{
+                    width: "80%",
+                    margin: "0 auto 20px auto",
+                    background: "#0056b8",
+                    color: "white",
+                    "&:hover": {
+                      background: "#0049a1",
+                    },
+                  }}
                 >
                   {item.button}
-                </a>
-              </Button>
+                </Button>
+              </a>
             </Box>
           ))}
         </Box>
